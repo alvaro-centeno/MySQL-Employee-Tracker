@@ -1,42 +1,6 @@
-const mysql = require('mysql');
 const inquierer = require('inquirer');
-const express = require('express');
-const PORT = process.env.PORT || 3000;
+const connection = require('./config/connection');
 
-
-
-const connection = mysql.createConnection({
-    host: "localhost",
-    port: 3306,
-    user: "root",
-    password: "password",
-    database: "employee_db",
-});
-
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-
-connection.connect(async (err) => {
-    if (err) throw err;
-
-    app.get('/', (req, res) => {
-        console.log('api hit');
-
-        connection.query('SELECT * FROM todos', (err, data) => {
-            err ? console.log(err) : res.json(data);
-
-
-            // if (err) {
-            //     console.log(err);
-            // }
-            // console.log(data);
-            // res.json(data);
-        })
-    });
-    app.listen(PORT, () => {
-        console.log(`listening at: http://localhost:${PORT}`);
-    })
-})
 
 function searchMenu() {
     inquirer
