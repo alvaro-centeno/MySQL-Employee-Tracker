@@ -8,25 +8,25 @@ Design the following database schema containing three tables:
 
 ![Database Schema](Assets/schema.png)
 
-* **department**:
+* **department_table**:
 
   * **id** - INT PRIMARY KEY
-  * **name** - VARCHAR(30) to hold department name
+  * **name** - VARCHAR(30) to hold department_table name
 
-* **role**:
-
-  * **id** - INT PRIMARY KEY
-  * **title** -  VARCHAR(30) to hold role title
-  * **salary** -  DECIMAL to hold role salary
-  * **department_id** -  INT to hold reference to department role belongs to
-
-* **employee**:
+* **role_table**:
 
   * **id** - INT PRIMARY KEY
-  * **first_name** - VARCHAR(30) to hold employee first name
-  * **last_name** - VARCHAR(30) to hold employee last name
-  * **role_id** - INT to hold reference to role employee has
-  * **manager_id** - INT to hold reference to another employee that manager of the current employee. This field may be null if the employee has no manager
+  * **title** -  VARCHAR(30) to hold role_table title
+  * **salary** -  DECIMAL to hold role_table salary
+  * **department_id** -  INT to hold reference to department_table role_table belongs to
+
+* **employee_table**:
+
+  * **id** - INT PRIMARY KEY
+  * **first_name** - VARCHAR(30) to hold employee_table first name
+  * **last_name** - VARCHAR(30) to hold employee_table last name
+  * **role_id** - INT to hold reference to role_table employee_table has
+  * **manager_id** - INT to hold reference to another employee_table that manager of the current employee_table. This field may be null if the employee_table has no manager
   
 Build a command-line application that at a minimum allows the user to:
 
@@ -34,17 +34,17 @@ Build a command-line application that at a minimum allows the user to:
 
   * View departments, roles, employees
 
-  * Update employee roles
+  * Update employee_table roles
 
 Bonus points if you're able to:
 
-  * Update employee managers
+  * Update employee_table managers
 
   * View employees by manager
 
   * Delete departments, roles, and employees
 
-  * View the total utilized budget of a department -- ie the combined salaries of all employees in that department
+  * View the total utilized budget of a department_table -- ie the combined salaries of all employees in that department_table
 
 We can frame this challenge as follows:
 
@@ -66,7 +66,7 @@ How do you deliver this? Here are some guidelines:
 
 * You will need to perform a variety of SQL JOINS to complete this assignment, and it's recommended you review the week's activities if you need a refresher on this.
 
-![Employee Tracker](Assets/employee-tracker.gif)
+![Employee Tracker](Assets/employee_table-tracker.gif)
 
 ### Hints
 
@@ -90,19 +90,19 @@ How do you deliver this? Here are some guidelines:
 
   * View departments, roles, employees
 
-  * Update employee roles
+  * Update employee_table roles
 
 ## Bonus
 
 * The command-line application should allow users to:
 
-  * Update employee managers
+  * Update employee_table managers
 
   * View employees by manager
 
   * Delete departments, roles, and employees
 
-  * View the total utilized budget of a department -- ie the combined salaries of all employees in that department
+  * View the total utilized budget of a department_table -- ie the combined salaries of all employees in that department_table
 
 ## Commit Early and Often
 
